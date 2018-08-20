@@ -1,16 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
+import { Provider } from 'react-redux'
+import store from './store'
+import App from './components/app'
 import './index.css'
 
-import store from './store'
-
 ReactDOM.render(
-  <App
-    stories={store.getState().storyState}
-    onArchive={(id) => {
-      console.log(id)
-    }}
-  />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 )
