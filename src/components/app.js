@@ -1,12 +1,10 @@
 import React from 'react'
-import './App.css'
+import Stories from './stories'
 
-import Stories from './Stories'
-
-const App = ({ onArchive, stories }) => {
+const App = () => {
   return (
     <div className="app">
-      <Stories stories={stories} onArchive={onArchive} />
+      <Stories />
     </div>
   )
 }
