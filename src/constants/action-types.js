@@ -1,1 +1,0 @@
-export const ARCHIVE_STORY = 'ARCHIVE_STORY'

@@ -1,9 +1,18 @@
 import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
-import rootReducer from '../reducers'
+import createSagaMiddleware from 'redux-saga'
+import rootReducer from './reducers'
+import { saga } from './sagas'
 
-const logger = createLogger()
+const loggerMiddleware = createLogger()
+const sagaMiddleware = createSagaMiddleware()
 
-const store = createStore(rootReducer, undefined, applyMiddleware(logger))
+const store = createStore(
+  rootReducer,
+  undefined,
+  applyMiddleware(sagaMiddleware, loggerMiddleware)
+)
+
+sagaMiddleware.run(saga)
 
 export default store

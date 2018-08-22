@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import archiveStory from '../actions/archive-story'
-import { getReadableStories } from '../selectors/story'
+import { archiveStory } from '../store/actions'
+import { getReadableStories } from '../store/selectors'
 import StoriesHeader from './stories-header'
 import Story from './story'
 

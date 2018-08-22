@@ -52,6 +52,9 @@ button:hover {
 .app {
   margin: 20px;
 }
+.interactions {
+  text-align: center;
+}
 .stories {
   margin: 20px 0;
 }
