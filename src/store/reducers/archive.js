@@ -1,6 +1,6 @@
 const INITIAL_STATE = []
 
-const archiveReducer = (state = INITIAL_STATE, action) => {
+export const archiveReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'ARCHIVE_STORY':
       return [...state, action.id]
@@ -8,5 +8,3 @@ const archiveReducer = (state = INITIAL_STATE, action) => {
       return state
   }
 }
-
-export default archiveReducer
