@@ -35,7 +35,7 @@ class SearchStories extends React.PureComponent {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <input type="text" onChange={this.onChange} />
+        <input type="text" onChange={this.onChange} value={this.state.query} />
         <Button type="submit">Search</Button>
       </form>
     )
