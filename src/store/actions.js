@@ -12,3 +12,8 @@ export const fetchStories = (query) => ({
   type: 'FETCH_STORIES',
   query,
 })
+
+export const fetchErrors = (error) => ({
+  type: 'FETCH_ERRORS',
+  error,
+})
