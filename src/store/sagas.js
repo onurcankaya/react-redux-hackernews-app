@@ -1,10 +1,6 @@
 import { all, takeLatest, call, put } from 'redux-saga/effects'
-import axios from 'axios'
 import { addStories, fetchErrors } from './actions'
-
-const HN_BASE_URL = 'https://hn.algolia.com/api/v1/search?query='
-
-const fetchStories = (query) => axios(`${HN_BASE_URL}${query}`)
+import { fetchStories } from './api'
 
 function* handleFetchStories(action) {
   try {
