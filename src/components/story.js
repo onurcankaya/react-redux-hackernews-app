@@ -12,9 +12,7 @@ const Story = ({ story, columns, archiveStory }) => {
       <span style={{ width: columns.comments.width }}>{num_comments}</span>
       <span style={{ width: columns.points.width }}>{points}</span>
       <span style={{ width: columns.archive.width }}>
-        <ButtonInline onClick={() => archiveStory(objectID)}>
-          Dismiss
-        </ButtonInline>
+        <ButtonInline onClick={() => archiveStory(objectID)}>Dismiss</ButtonInline>
       </span>
     </div>
   )

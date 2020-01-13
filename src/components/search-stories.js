@@ -46,7 +46,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchStories: (query) => dispatch(fetchStories(query)),
 })
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(SearchStories)
+export default connect(null, mapDispatchToProps)(SearchStories)

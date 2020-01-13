@@ -36,12 +36,7 @@ const Stories = ({ archiveStory, stories, error }) => {
       {error && <p className="error">Something went wrong...</p>}
 
       {(stories || []).map((story) => (
-        <Story
-          columns={COLUMNS}
-          key={story.objectID}
-          archiveStory={archiveStory}
-          story={story}
-        />
+        <Story columns={COLUMNS} key={story.objectID} archiveStory={archiveStory} story={story} />
       ))}
     </div>
   )
@@ -56,7 +51,4 @@ const mapDispatchToProps = (dispatch) => ({
   archiveStory: (id) => dispatch(archiveStory(id)),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Stories)
+export default connect(mapStateToProps, mapDispatchToProps)(Stories)
